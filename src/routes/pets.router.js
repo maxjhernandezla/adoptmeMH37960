@@ -4,7 +4,7 @@ import uploader from '../utils/uploader.js';
 
 const router = Router();
 
-router.get('/',petsController.getAllPets);
+router.get('/all',petsController.getAllPets);
 router.post('/',petsController.createPet);
 router.post('/withimage',uploader.single('image'), petsController.createPetWithImage);
 router.put('/:pid',petsController.updatePet);
